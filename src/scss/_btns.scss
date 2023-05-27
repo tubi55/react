@@ -1,0 +1,20 @@
+.prev {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -300px;
+	background: transparent;
+	border: none;
+	font: bold 24px/1 'arial';
+	color: #fff;
+}
+.next {
+	position: absolute;
+	top: 50%;
+	right: 50%;
+	margin-right: -300px;
+	background: transparent;
+	border: none;
+	font: bold 24px/1 'arial';
+	color: #fff;
+}
