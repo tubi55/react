@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-function Btns({ frame, len }) {
+function Btns({ frame, len, prev }) {
 	let [Num, setNum] = useState(0);
 
 	useEffect(() => {
@@ -14,6 +14,7 @@ function Btns({ frame, len }) {
 				onClick={() => {
 					setNum(++Num);
 					frame.current.style.transform = `rotate(${(360 / len) * Num}deg)`;
+					prev();
 				}}
 			>
 				PREV
