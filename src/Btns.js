@@ -1,8 +1,12 @@
-function Btns() {
+function Btns({ frame }) {
 	return (
 		<>
-			<button className='prev'>PREV</button>
-			<button className='next'>NEXT</button>
+			<button className='prev' onClick={() => console.log(frame)}>
+				PREV
+			</button>
+			<button className='next' onClick={() => console.log(frame)}>
+				NEXT
+			</button>
 		</>
 	);
 }
