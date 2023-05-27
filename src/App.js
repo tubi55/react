@@ -25,11 +25,15 @@ function App() {
 		setActive((Active) => (Active === 0 ? arr.length - 1 : --Active));
 	};
 
+	const next = () => {
+		setActive((Active) => (Active === arr.length - 1 ? 0 : ++Active));
+	};
+
 	return (
 		<>
 			<Header />
 			<Section frame={frame} items={arr} Active={Active} />
-			<Btns frame={frame} len={arr.length} prev={prev} />
+			<Btns frame={frame} len={arr.length} prev={prev} next={next} />
 			<Footer />
 		</>
 	);

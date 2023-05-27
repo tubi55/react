@@ -1,7 +1,12 @@
 import { useState, useEffect } from 'react';
 
-function Btns({ frame, len, prev }) {
+function Btns({ frame, len, prev, next }) {
 	let [Num, setNum] = useState(0);
+
+	const moveCard = (num) => {
+		setNum(num);
+		frame.current.style.transform = `rotate(${(360 / len) * Num}deg)`;
+	};
 
 	useEffect(() => {
 		console.log(Num);
@@ -12,8 +17,7 @@ function Btns({ frame, len, prev }) {
 			<button
 				className='prev'
 				onClick={() => {
-					setNum(++Num);
-					frame.current.style.transform = `rotate(${(360 / len) * Num}deg)`;
+					moveCard(++Num);
 					prev();
 				}}
 			>
@@ -22,8 +26,8 @@ function Btns({ frame, len, prev }) {
 			<button
 				className='next'
 				onClick={() => {
-					setNum(--Num);
-					frame.current.style.transform = `rotate(${(360 / len) * Num}deg)`;
+					moveCard(--Num);
+					next();
 				}}
 			>
 				NEXT
