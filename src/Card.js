@@ -1,7 +1,12 @@
 function Card({ data }) {
 	return (
 		<article>
-			<h1>{data}</h1>
+			<div className='inner'>
+				<div className='pic'>
+					<img src={`${process.env.PUBLIC_URL}/img/${data}.jpg`} alt={data} />
+				</div>
+				<h2>{data}</h2>
+			</div>
 		</article>
 	);
 }
