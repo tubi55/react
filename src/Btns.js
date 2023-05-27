@@ -13,7 +13,7 @@ function Btns({ frame, len }) {
 				className='prev'
 				onClick={() => {
 					setNum(++Num);
-					frame.current.style.transform = `rotate(${(360 / len.current) * Num}deg)`;
+					frame.current.style.transform = `rotate(${(360 / len) * Num}deg)`;
 				}}
 			>
 				PREV
@@ -22,7 +22,7 @@ function Btns({ frame, len }) {
 				className='next'
 				onClick={() => {
 					setNum(--Num);
-					frame.current.style.transform = `rotate(${(360 / len.current) * Num}deg)`;
+					frame.current.style.transform = `rotate(${(360 / len) * Num}deg)`;
 				}}
 			>
 				NEXT

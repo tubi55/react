@@ -1,22 +1,11 @@
 import Card from './Card';
 
-function Section({ frame, len }) {
-	const arr = [
-		'Blizzards',
-		'Calm',
-		'Dusty_Road',
-		'Escape',
-		'Payday',
-		'Retreat',
-		'Seasonal',
-		'Vespers',
-	];
-
-	len.current = arr.length;
+function Section({ frame, items }) {
+	console.log(items);
 	return (
 		<section style={{ top: '140%' }} ref={frame}>
-			{arr.map((data, idx) => {
-				return <Card key={idx} data={data} len={arr.length} index={idx} />;
+			{items.map((data, idx) => {
+				return <Card key={idx} data={data} len={items.length} index={idx} />;
 			})}
 		</section>
 	);
