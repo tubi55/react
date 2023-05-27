@@ -12,9 +12,9 @@ function Section() {
 		'Vespers',
 	];
 	return (
-		<section>
+		<section style={{ top: '140%' }}>
 			{arr.map((data, idx) => {
-				return <Card key={idx} data={data} />;
+				return <Card key={idx} data={data} len={arr.length} index={idx} />;
 			})}
 		</section>
 	);

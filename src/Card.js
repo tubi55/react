@@ -1,6 +1,8 @@
-function Card({ data }) {
+function Card({ data, len, index }) {
+	const style = { transform: `rotate(${(360 / len) * index}deg) translateY(-180%)` };
+
 	return (
-		<article>
+		<article style={style}>
 			<div className='inner'>
 				<div className='pic'>
 					<img src={`${process.env.PUBLIC_URL}/img/${data}.jpg`} alt={data} />
