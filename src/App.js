@@ -7,13 +7,14 @@ import { useRef } from 'react';
 
 function App() {
 	const frame = useRef(null);
+	const len = useRef(0);
 	console.log(frame);
 
 	return (
 		<>
 			<Header />
-			<Section frame={frame} />
-			<Btns frame={frame} />
+			<Section frame={frame} len={len} />
+			<Btns frame={frame} len={len} />
 			<Footer />
 		</>
 	);

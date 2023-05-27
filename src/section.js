@@ -1,6 +1,6 @@
 import Card from './Card';
 
-function Section({ frame }) {
+function Section({ frame, len }) {
 	const arr = [
 		'Blizzards',
 		'Calm',
@@ -11,6 +11,8 @@ function Section({ frame }) {
 		'Seasonal',
 		'Vespers',
 	];
+
+	len.current = arr.length;
 	return (
 		<section style={{ top: '140%' }} ref={frame}>
 			{arr.map((data, idx) => {
